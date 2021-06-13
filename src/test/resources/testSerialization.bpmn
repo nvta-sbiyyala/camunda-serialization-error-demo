@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1u322gk" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.6.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.14.0">
+  <bpmn:process id="TestSerialization" name="Test" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_1opiu0g</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_1opiu0g" sourceRef="StartEvent_1" targetRef="Activity_1bwamjg" />
+    <bpmn:endEvent id="Event_1qle04b">
+      <bpmn:incoming>Flow_17h7on9</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:manualTask id="Activity_1bwamjg" name="Wait">
+      <bpmn:incoming>Flow_1opiu0g</bpmn:incoming>
+      <bpmn:outgoing>Flow_17h7on9</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:sequenceFlow id="Flow_17h7on9" sourceRef="Activity_1bwamjg" targetRef="Event_1qle04b" />
+    <bpmn:textAnnotation id="TextAnnotation_0x77elm">
+      <bpmn:text>Pause here and allow the test case to assert on variable serialization</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_102d4e0" sourceRef="Activity_1bwamjg" targetRef="TextAnnotation_0x77elm" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="TestSerialization">
+      <bpmndi:BPMNEdge id="Flow_17h7on9_di" bpmnElement="Flow_17h7on9">
+        <di:waypoint x="370" y="217" />
+        <di:waypoint x="422" y="217" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1opiu0g_di" bpmnElement="Flow_1opiu0g">
+        <di:waypoint x="215" y="217" />
+        <di:waypoint x="270" y="217" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="199" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1qle04b_di" bpmnElement="Event_1qle04b">
+        <dc:Bounds x="422" y="199" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0calb7a_di" bpmnElement="Activity_1bwamjg">
+        <dc:Bounds x="270" y="177" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0x77elm_di" bpmnElement="TextAnnotation_0x77elm">
+        <dc:Bounds x="260" y="100" width="204" height="53" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_102d4e0_di" bpmnElement="Association_102d4e0">
+        <di:waypoint x="316" y="177" />
+        <di:waypoint x="314" y="153" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

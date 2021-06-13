@@ -1,0 +1,23 @@
+camunda:
+  bpm:
+    default-serialization-format: application/json
+    admin-user:
+      id: demo
+      password: demo
+
+spring:
+  application:
+    name: camunda-serialization-error-demo
+  codec:
+    max-in-memory-size: 2MB
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+
+logging:
+  level:
+    org.springframework.*: ${LOG_LEVEL:INFO}
