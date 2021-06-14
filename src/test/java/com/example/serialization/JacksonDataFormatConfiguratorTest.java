@@ -15,7 +15,7 @@ import java.util.List;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @SpringBootTest(properties = "camunda.bpm.generate-unique-process-engine-name=true")
-public class TestJacksonDataFormatConfigurator {
+public class JacksonDataFormatConfiguratorTest {
     @Autowired
     private RuntimeService runtimeService;
 
